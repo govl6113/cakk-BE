@@ -5,8 +5,13 @@
 ## 프로젝트 설명
 
 위치기반 케이크샵 지도 어플로, 원하는 케이크샵을 확인하고 상세정보를 확인할 수 있습니다.
-
 (현재 서울지역에서 서비스 중)
+
+[케이크크 IOS 앱스토어 실적]
+- 기준일: 23.08.12
+- 총 노출 수: 2.9천
+- 총 다운로드 수(재설치 제외): 105건
+- 전환율: 5.83%
 
 <br>
 
@@ -53,8 +58,9 @@
 
 <img width="639" alt="pic2" src="https://github.com/Prography-8th-team8/team8-BE/assets/43109589/e3e16e9e-48b4-454a-a3ab-1c22ae9e30ff">
 
-<br>
-<br>
+<br/>
+<br/>
+<br/>
 
 ## ERD
 
@@ -62,8 +68,16 @@
 
 <br/>
 <br/>
-
 <br/>
+
+## Issue & PR
+[Issue click](https://github.com/Prography-8th-team8/team8-BE/issues)
+
+[PR click](https://github.com/Prography-8th-team8/team8-BE/pulls)
+
+<br>
+<br>
+<br>
 
 ## 실행 화면
 
