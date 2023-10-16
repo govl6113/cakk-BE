@@ -70,11 +70,12 @@
 <br/>
 <br/>
 
-## Issue & PR
+## Issue & PR & 고민의 흔적들
 [Issue click](https://github.com/Prography-8th-team8/team8-BE/issues)
 
 [PR click](https://github.com/Prography-8th-team8/team8-BE/pulls)
 
+[고민 흔적 click](https://brash-wanderer-5cd.notion.site/7c995f38249e411ca7ac9f6211f8c723?pvs=4)
 <br>
 <br>
 <br>
@@ -127,3 +128,27 @@ https://github.com/govl6113/cakk-BE/assets/81179951/4ffb5bac-a6f6-4f21-b8d6-d1f3
 
 https://github.com/govl6113/cakk-BE/assets/81179951/567877a6-0d14-4db6-b427-c84ddb7c2c2d
 
+<br>
+<br>
+
+## 성능 테스트
+K6를 사용해 부하를 주고, Prometheus와 Grafana를 이용해 모니터링을 진행했습니다. <br>
+
+### 성능테스트 목표설정
+1일 총 요청수 = 1,000,000(백만) <br>
+1일 평균 rps(request per second) = 1,000,000 (백만) / 43200(12시간) = 23rps <br>
+1일 최대 rps = 1일 평균 rps * 피크 시간 집중률 = 23rps * 50 = 1150 rps <br>
+즉, throughput은 23(1일 평균 rps) ~ 115(1일 최대 rps)가 나오게 됩니다. 이 정보를 통해서 VUser를 계산할 수 있습니다.<br>
+<br>
+
+목표 rps = Vuser * 1초당 요청 횟수 <br>
+Vuser = 목표 rps / 1초당 요청 횟수 <br>
+Vuser = 목표 rps * (한 번의 시나리오를 완료하는데 걸리는 시간) / (시나리오 당 요청수 = 1이니까 제외) <br>
+Vuser = 목표 rps * (한 번의 시나리오를 완료하는데 걸리는 시간) <br>
+평균 Vuser = 23 * 0.1s = 2 <br>
+최대 Vuser = 1150 * 0.1(0.02 WAS 로직처리 + DB조회 0.08)s = 115 <br>
+
+참고: [https://velog.io/@sontulip/performance-test#테스트의-목표](https://velog.io/@sontulip/performance-test#%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%9D%98-%EB%AA%A9%ED%91%9C)<br>
+
+### 성능테스트 결과
+![성능테스트3](https://github.com/govl6113/cakk-BE/assets/81179951/a5a9429f-fad6-4785-8e47-799b9f2bfb88)
