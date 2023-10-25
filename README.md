@@ -34,6 +34,9 @@
 7. 케이크샵 관련 네이버 가게 정보 조회
 8. 랜덤 케이크 사진으로 피드 조회
 
+### 개발하며 고민한 것들 -> [고민 흔적남기기 click](https://brash-wanderer-5cd.notion.site/7c995f38249e411ca7ac9f6211f8c723?pvs=4)
+
+<br>
 <br>
 
 ## 기술스택
@@ -70,12 +73,11 @@
 <br/>
 <br/>
 
-## Issue & PR & 고민의 흔적들
+## Issue & PR 
 [Issue click](https://github.com/Prography-8th-team8/team8-BE/issues)
 
 [PR click](https://github.com/Prography-8th-team8/team8-BE/pulls)
 
-[고민 흔적 click](https://brash-wanderer-5cd.notion.site/7c995f38249e411ca7ac9f6211f8c723?pvs=4)
 <br>
 <br>
 <br>
